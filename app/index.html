@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">
+    <p class="brand-kicker">Grand Theft Auto VI · PS5 · 55 trophies</p>
+    <h1>Leonida <span class="brand-accent">Legend</span></h1>
+    <p class="brand-sub">The offline trophy guide &amp; tracker: every official trophy, a cited guide for each one, missable flags, and a five-stage road to the platinum.</p>
+  </div>
+  <section class="progress-card" aria-label="Your progress">
+    <div class="progress-top">
+      <span id="progress-percent" class="progress-percent">0%</span>
+      <span id="progress-count" class="progress-count">0 of 55 earned</span>
+    </div>
+    <div class="progress-bar"><div id="progress-fill" class="progress-fill"></div></div>
+    <ul class="grade-counts">
+      <li><span class="grade-dot grade-platinum"></span>Platinum <strong id="count-platinum">0/1</strong></li>
+      <li><span class="grade-dot grade-gold"></span>Gold <strong id="count-gold">0/2</strong></li>
+      <li><span class="grade-dot grade-silver"></span>Silver <strong id="count-silver">0/6</strong></li>
+      <li><span class="grade-dot grade-bronze"></span>Bronze <strong id="count-bronze">0/46</strong></li>
+    </ul>
+    <div class="progress-actions">
+      <button id="export-progress" type="button">Export progress</button>
+      <label class="import-button">Import progress <input id="import-progress" type="file" accept="application/json"></label>
+    </div>
+  </section>
+</header>
+
+<nav class="view-tabs" aria-label="Views">
+  <button id="tab-checklist" class="view-tab is-active" type="button">Checklist &amp; guides</button>
+  <button id="tab-roadmap" class="view-tab" type="button">Road to Platinum</button>
+</nav>
+
+<section id="checklist-view">
+  <div class="filter-bar">
+    <div class="kind-chips" role="group" aria-label="Filter by kind">
+      <button class="kind-chip is-active" type="button" data-kind="all">All</button>
+      <button class="kind-chip" type="button" data-kind="story">Story</button>
+      <button class="kind-chip" type="button" data-kind="missable">Missable</button>
+      <button class="kind-chip" type="button" data-kind="collectible">Collectibles</button>
+      <button class="kind-chip" type="button" data-kind="activity">Activities</button>
+      <button class="kind-chip" type="button" data-kind="online">Online</button>
+      <button class="kind-chip" type="button" data-kind="misc">Misc</button>
+    </div>
+    <label class="grade-filter">Grade
+      <select id="grade-filter">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label class="search-filter">Search
+      <input id="search-filter" type="search" placeholder="Trophy name or keyword…">
+    </label>
+    <label class="toggle"><input id="hide-earned" type="checkbox"> Hide earned</label>
+    <label class="toggle toggle-spoiler"><input id="spoiler-mode" type="checkbox"> Spoiler mode</label>
+  </div>
+  <p id="result-count" class="result-count"></p>
+  <div class="checklist-layout">
+    <ol id="trophy-list" class="trophy-list"></ol>
+    <aside id="guide-panel" class="guide-panel" aria-label="Trophy guide"></aside>
+  </div>
+</section>
+
+<section id="roadmap-view" hidden>
+  <div class="roadmap-intro">
+    <h2>Road to Platinum</h2>
+    <p>Five stages, in the order this guide recommends playing them. Missable trophies are flagged wherever they appear — clear them inside their stage and the platinum stays stress-free. Estimated shape: story first, strands before the finale, then the sweeps.</p>
+  </div>
+  <div id="roadmap-stages"></div>
+</section>
+
+<footer class="site-footer">
+  <p>Guides are original text written for this tracker. Trophy names and descriptions are the official PlayStation ones; strategy specifics are cited per trophy from the PlayStation trophy list via Exophase, the PSNProfiles trophy list, and the PowerPyx trophy guide &amp; roadmap. Progress never leaves your browser — it is stored in localStorage and only exported when you ask.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
